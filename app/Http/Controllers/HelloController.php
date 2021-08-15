@@ -11,6 +11,13 @@ class HelloController extends Controller
     }
 
     public function services() {
-        return view('partials.services');
+        $services = [
+            'service 1',
+            'service 2',
+            'service 3',
+            'service 4'
+        ];
+
+        return view('partials.services', compact('services'));
     }
 }
